@@ -1,16 +1,10 @@
 # asml-product-p3-scheduler
 
-**Facility wafers/day under split multi-kW bunch trains — who gets photons when a train drops. Waits FEL-03 research feed for physics KEEP; Spec proceeds now.**
+Facility wafers/day under shared FEL split. Card: `beam-split-first-mirror-v1`. Physics KEEP waits FEL-03.
 
-| | |
-|--|--|
-| Spec | [`SPEC.md`](SPEC.md) · asml-bench [#46](https://github.com/gtmsko46-debug/asml-bench/issues/46) |
-| Factory | [FACTORY.md](https://github.com/gtmsko46-debug/asml-bench/blob/main/products/FACTORY.md) |
-| Stage | **Spec (M0)** — package/build waits bay |
-
-```bash
-# after M1
-pip install -e '.[dev]'
+```python
+from asml_product_p3_scheduler import schedule_facility
+plan = schedule_facility({"n_tools": 4, "priorities": [2, 1, 1, 1]})
 ```
 
-Sandbox hill-climbs live on asml-bench (`labs/p3-scheduler/scheduler.py (scaffold; FEL-03 bind when ready)`); set `ASML_BENCH_ROOT` to pick up live weights once the loader exists.
+M1 SEED. Parent #46.
