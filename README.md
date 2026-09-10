@@ -1,5 +1,7 @@
 # asml-product-p3-scheduler
 
+> **Champion FREEZE (2026-09-10):** no new hills / no new tickets. This README is the ship surface — polish docs only. See asml-bench `corpus/notes/champion-freeze-2026-09-10-product-ship.md`.
+
 Facility wafers/day under shared FEL split. Card: `beam-split-first-mirror-v1`. Physics KEEP waits FEL-03.
 
 ```python
